@@ -30,7 +30,13 @@
         </div>
         <div class="navbar__s3">
             <p>Courses</p>
-            <p>My Learning</p>
+            <!--<p>My Learning</p>-->
+            <div class="mylearning">
+                <p>My Learning</p>
+                <div class="mylearning__popup">
+                  <p>You did not purchase anything yet</p>  
+                </div>
+            </div>
             <i class="fa-sharp fa-solid fa-cart-shopping" style="color: #000000;"></i>
             <i class="fa-sharp fa-solid fa-bell" style="color: #000000;"></i>
             <i class="fa-solid fa-user" style="color: #000000;"></i>
@@ -46,8 +52,12 @@
         <p>Marketing</p>
     </div>
     <!--Sale image-->
-    <div class="sale-image">
+    <div class="sale-image"><!--this i put position relative-->
         <img src="./images/sale image.jpg" alt="Sale Image">
+        <div class="sale-image__offer"><!--in this div i put absolute-->
+            <h2>Ready for an upgrade?</h2>
+            <p>Explore our top-rated development courses. Skill up fast with features like coding exercises and practice tests.</p>
+        </div>
     </div>
     <!--Recommended-->
     <div class="recommended">
