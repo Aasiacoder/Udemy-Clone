@@ -80,6 +80,14 @@ body {
     color: white;
     padding: 10px;
     border-radius: 30px;
+    cursor: pointer;
+    border: solid #A335F0 1px;/*if you give hover border means here also give border, that time you avoid the shaking effects*/
+ }
+ .categories p:hover {
+    transition: 1s;
+    background-color: transparent;
+    color: black;
+    border: solid #A335F0 1px;
  }
 /*Sale Image*/
 .sale-image {
@@ -96,8 +104,21 @@ body {
     position: absolute;
     top: 10%;
     left: 10%;
+    animation-name: zoom;/*Amimation Properties use here*/
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
-
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 /*Recommended Course card*/
 .recommended {
     padding: 10px;
