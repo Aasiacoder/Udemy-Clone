@@ -47,6 +47,10 @@ body {
     gap: 10px;/*inside the flex set gap like margin*/
     align-items: center;/*inside the navbar not align properly s1,s2,s3 put center*/
 }
+.navbar__s4 {
+    display: none;/*menu bar icon didn't wnat when screen was big*/
+}
+
 /*My learning popup*/
 .mylearning {
     position: relative;/*parent give relative*/
@@ -130,7 +134,10 @@ body {
     margin-top: 10px;
 }
 .course-card {
-    width: 250px;/*give width in px bcz when you minimize r mobile device use it have no space then img will go down */
+    /*width: 250px;*//*give width in px bcz when you minimize r mobile device use it have no space then img will go down */
+    flex-grow: 1;
+    flex-basis: 20%;/*this img width is for big screen*/
+    margin: 5px;/*in between img gap*/
 }
 .course-card img{/*course card image is now set properly*/
     width: 100%;/*img 20% width*/
@@ -181,3 +188,26 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
+/*Media Query*/
+
+@media screen and (max-width:800px) {/*Tablet size i change the all elements*/
+    body {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:600px) {/*small screen size i change the all elements*/
+    .course-card {
+        flex-basis: 40%;/*course-card img size decreese*/
+    }
+    .categories {
+        display: none;/*small screen i don't want catergories i remove it*/
+    }
+    .navbar__s2, .navbar__s3 {
+        display: none;/*navbar content remove when screen was small*/
+    }
+    .navbar__s4 {
+        display: block;/*when screen size small that time menu bar will be available*/
+    }
+}
+
